@@ -44,16 +44,17 @@ function greeting(name, gender, isSelf) {
     }
     // if self is true, prefix as "my"
     if (isSelf == true) {
-        ret.push("my");
+        ret.push(prefixes[0]);
         // if self is false, prefix as "male/female/their depends on gender param"
     } else {
-        if (gender == "male") {
-            ret.push("his")
-        } else if (gender == "female") {
-            ret.push("her")
-                // default as "their" 
+        if (gender == genders[0]) {
+            // ret.push("his")
+            ret.push(prefixes[1]);
+        } else if (gender == genders[1]) {
+            ret.push(prefixes[2]);
+            // default as "their" 
         } else {
-            ret.push("their")
+            ret.push(prefixes[3]);
         }
     }
     ret.push("name is");
@@ -66,12 +67,13 @@ function greeting(name, gender, isSelf) {
     return ret; // use template literal for string to return
 }
 
+
+
 // expecting hoisting
 const greetingWords = ["hello", "hi", "hey"];
 const prefixes = ["my", "his", "her", "their"];
 const genders = ["male", "female", "nonbinary"];
 
-var isSelf = false;
 console.log(greeting("jason", "male", true));
 console.log(greeting("claire", "female", false));
 console.log(greeting("Simpson", "nonbinary", false));
