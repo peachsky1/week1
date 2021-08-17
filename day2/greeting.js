@@ -9,9 +9,6 @@ Use a different greeting word for each gender
 Use "his" for men, "her" for women, "their" for nonbinary.
 
 Use "my" if the isSelf argument is true
-
-const greetingWords = ["hello","hi","hey"];
-const prefixes = ["my", "his", "her", "their"];
 */
 
 /**
