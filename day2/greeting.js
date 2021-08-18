@@ -25,7 +25,7 @@ Use "my" if the isSelf argument is true
 function firstCharUpperCase(str) {
     str.toString().toLowerCase();
     str = str.toString().charAt(0).toUpperCase() + str.toString().slice(1);
-    return str
+    return str;
 }
 
 function greeting(name, gender, isSelf) {
@@ -33,7 +33,8 @@ function greeting(name, gender, isSelf) {
     let ret = [];
 
     //     greeting msg with first char upper case only
-    let randomGreeting = greetingWords[Math.floor(Math.random() * greetingWords.length)];
+    let randomGreeting =
+        greetingWords[Math.floor(Math.random() * greetingWords.length)];
 
     randomGreeting = firstCharUpperCase(randomGreeting) + ",";
     ret.push(randomGreeting);
@@ -48,11 +49,10 @@ function greeting(name, gender, isSelf) {
         // if self is false, prefix as "male/female/their depends on gender param"
     } else {
         if (gender == genders[0]) {
-            // ret.push("his")
             ret.push(prefixes[1]);
         } else if (gender == genders[1]) {
             ret.push(prefixes[2]);
-            // default as "their" 
+            // default as "their"
         } else {
             ret.push(prefixes[3]);
         }
@@ -60,14 +60,11 @@ function greeting(name, gender, isSelf) {
     ret.push("name is");
     ret.push(firstCharUpperCase(name));
 
-
     // adding space for each str
     ret = ret.join(" ");
 
     return ret; // use template literal for string to return
 }
-
-
 
 // expecting hoisting
 const greetingWords = ["hello", "hi", "hey"];
