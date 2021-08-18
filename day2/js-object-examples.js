@@ -18,8 +18,6 @@ const myInfoAsJSON = JSON.stringify(myInfo);
 console.log(myInfoAsJSON);
 
 function sayHi(name) {
-    return `my name is ${name} and I'm ${age} years old`;
+    return `my name is ${name} and I'm  years old`;
 }
 console.log(sayHi("Jason, 30"));
-
-
